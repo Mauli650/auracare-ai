@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCare AI - Health Companion</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0fdf4; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #0d9488; text-align: center; }
+        .tagline { text-align: center; color: #64748b; margin-bottom: 30px; }
+        .chat-box { height: 300px; border: 1px solid #cbd5e1; border-radius: 8px; padding: 15px; overflow-y: scroll; background-color: #f8fafc; margin-bottom: 15px; }
+        .input-area { display: flex; gap: 10px; }
+        input[type="text"] { flex: 1; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; }
+        button { background-color: #0d9488; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0f766e; }
+        .features { display: flex; justify-content: space-between; margin-top: 30px; gap: 15px; }
+        .card { background: #e6fffa; border: 1px solid #99f6e4; padding: 15px; border-radius: 8px; flex: 1; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AuraCare AI 🩺✨</h1>
+        <p class="tagline">Your AI-Powered Physical & Mental Health Companion</p>
+        
+        <div class="chat-box" id="chatBox">
+            <p><strong>AuraCare AI:</strong> Hello! How are you feeling today physically and mentally? Describe your symptoms or stress level, and I'll help you.</p>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type your symptoms or how you're feeling...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <div class="features">
+            <div class="card">
+                <h3>🧠 Mental Health</h3>
+                <p>Real-time stress analysis and empathetic support.</p>
+            </div>
+            <div class="card">
+                <h3>🏥 Physical Health</h3>
+                <p>Instant symptom checking & diagnosis guidance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+            if (input.value.trim() !== "") {
+                chatBox.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
+                chatBox.innerHTML += `<p><strong>AuraCare AI:</strong> Thank you for sharing. I'm analyzing your response to provide empathetic support and preliminary recommendations...</p>`;
+                input.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
