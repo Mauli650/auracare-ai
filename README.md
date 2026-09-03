@@ -19,7 +19,9 @@
 
 
 1. Install dependencies:
- pip install google-generativeai flask
+   ```bash
+   pip install google-generativeai flask
 
 2.Run the backend:
+```bash
 python app.py
