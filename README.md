@@ -16,3 +16,9 @@
 1. Clone the repository:
    ```bash
    git clone [https://github.com/Mauli650/auracare-ai.git](https://github.com/Mauli650/auracare-ai.git)
+
+
+1. Install dependencies:
+ pip install google-generativeai flask
+
+2.Run the backend:python app.py
